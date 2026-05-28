@@ -2,6 +2,21 @@ packages:
   - apps/*
   - packages/*
 
+blockExoticSubdeps: false
+
+minimumReleaseAge: 60
+
+minimumReleaseAgeExclude:
+  - vite-plus
+  - "@voidzero-dev/*"
+  - "@oxc-project/*"
+  - "@oxlint/*"
+  - oxlint
+  - oxfmt
+  - oxlint-tsgolint
+  - vitest
+  - "@vitest/*"
+
 catalog:
   "@tailwindcss/vite": ^4.1.13
   "@testing-library/react": ^16.3.0
@@ -19,14 +34,16 @@ catalog:
   tailwindcss: ^4.1.13
   top-github-dependents-by-stars: ^1.0.4
   typescript: ^6.0.0
-  vite-plus: latest
-  vite: npm:@voidzero-dev/vite-plus-core@latest
-  vitest: npm:@voidzero-dev/vite-plus-test@latest
+  vite-plus: "https://pkg.pr.new/voidzero-dev/vite-plus@1588"
+  vite: "https://pkg.pr.new/voidzero-dev/vite-plus/@voidzero-dev/vite-plus-core@1588"
+  vitest: ^4.1.5
 
 allowBuilds:
   "@parcel/watcher": true
   "@tailwindcss/oxide": true
+  edgedriver: false
   esbuild: true
+  geckodriver: false
 
 onlyBuiltDependencies:
   - "@parcel/watcher"
@@ -35,6 +52,8 @@ onlyBuiltDependencies:
 overrides:
   vite: "catalog:"
   vitest: "catalog:"
+  "@voidzero-dev/vite-plus-core": "https://pkg.pr.new/voidzero-dev/vite-plus/@voidzero-dev/vite-plus-core@5577b0154f33d1480a3c96347e94fa5d2094de2e"
+  "@voidzero-dev/vite-plus-prompts": "https://pkg.pr.new/voidzero-dev/vite-plus/@voidzero-dev/vite-plus-prompts@5577b0154f33d1480a3c96347e94fa5d2094de2e"
 peerDependencyRules:
   allowAny:
     - vite
