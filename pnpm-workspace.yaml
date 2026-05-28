@@ -41,7 +41,9 @@ catalog:
 allowBuilds:
   "@parcel/watcher": true
   "@tailwindcss/oxide": true
+  edgedriver: false
   esbuild: true
+  geckodriver: false
 
 onlyBuiltDependencies:
   - "@parcel/watcher"
