@@ -4,6 +4,7 @@ packages:
 
 catalog:
   "@tailwindcss/vite": ^4.1.13
+  "@vitest/browser-playwright": 4.1.9
   "@testing-library/react": ^16.3.0
   "@testing-library/user-event": ^14.6.1
   "@types/react": ^19.1.10
@@ -19,9 +20,9 @@ catalog:
   tailwindcss: ^4.1.13
   top-github-dependents-by-stars: ^1.0.4
   typescript: ^6.0.0
-  vite-plus: latest
-  vite: npm:@voidzero-dev/vite-plus-core@latest
-  vitest: npm:@voidzero-dev/vite-plus-test@latest
+  vite-plus: "https://pkg.pr.new/voidzero-dev/vite-plus@1856"
+  vite: "https://pkg.pr.new/voidzero-dev/vite-plus/@voidzero-dev/vite-plus-core@1856"
+  vitest: "4.1.9"
 
 allowBuilds:
   "@parcel/watcher": true
@@ -42,3 +43,18 @@ peerDependencyRules:
   allowedVersions:
     vite: "*"
     vitest: "*"
+
+minimumReleaseAge: 60
+minimumReleaseAgeExclude:
+  - "@voidzero-dev/*"
+  - vite-plus
+  - "@vitest/*"
+  - vite
+  - vitest
+  - "@oxc-project/*"
+  - "@oxlint/*"
+  - oxlint
+  - oxfmt
+  - oxlint-tsgolint
+
+blockExoticSubdeps: false
