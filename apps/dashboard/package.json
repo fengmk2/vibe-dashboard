@@ -31,7 +31,8 @@
     "@vitest/browser-playwright": "4.1.9",
     "playwright": "catalog:",
     "tailwindcss": "catalog:",
+    "vite": "catalog:",
     "vite-plus": "catalog:",
-    "vitest": "4.1.9"
+    "vitest": "catalog:"
   }
 }
